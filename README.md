@@ -44,7 +44,7 @@ Supported models: X5, X4, X3, ONE X2, ONE X, ONE RS, ONE RS 1-Inch.
     * [Export](#export)
     * [Generate HDR images](#generate-hdr-images)
     * [Generate PureShot images](#generate-pureshot-images)
-    * [Algorithm File](#generate-pureshot-imagesal)
+    * [Algorithm File](#algorithm-file)
     * [Error code](#error-code-1)
 
 # CameraSDK Function Instructions
