@@ -1,5 +1,6 @@
 # Note:
 Currently on `V1.8.0-build11` branch. To view other versions, please switch branches.
+
 32-bit library (armeabi-v7a) is no longer maintained, please use 64-bit library (arm64-v8a) to build!
 
 # How to get?
