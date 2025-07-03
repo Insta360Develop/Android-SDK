@@ -86,7 +86,7 @@ public class MyApp extends Application {
 }
 ```
 
-## Camera Connection and Disconnection**
+## Camera Connection and Disconnection
 
 ###  **Connecting the Camera**
 
