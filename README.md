@@ -33,6 +33,7 @@ Supported models: X5, X4, X3, ONE X2, ONE X, ONE RS, ONE RS 1-Inch.
     * [Firmware upgrade](#firmware-upgrade)
     * [Camera activation](#camera-activation)
     * [Other features](#other-features)
+    * [Log](#Log)
     * [Error code](#error-code)
 * [MediaSDK Function Instructions](#mediasdk-function-instructions)
     * [Environmental preparation](#environmental-preparation)
@@ -43,6 +44,7 @@ Supported models: X5, X4, X3, ONE X2, ONE X, ONE RS, ONE RS 1-Inch.
     * [Export](#export)
     * [Generate HDR images](#generate-hdr-images)
     * [Generate PureShot images](#generate-pureshot-images)
+    * [Algorithm File](#generate-pureshot-imagesal)
     * [Error code](#error-code-1)
 
 # CameraSDK Function Instructions
