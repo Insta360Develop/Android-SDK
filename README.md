@@ -3,6 +3,7 @@ Currently on `V1.8.0-build11` branch. To view other versions, please switch bran
 
 32-bit library (armeabi-v7a) is no longer maintained, please use 64-bit library (arm64-v8a) to build!
 
+[FAQ](#FAQ)
 # How to get?
 
 Please visit [https://www.insta360.com/sdk/apply](https://www.insta360.com/sdk/apply) to apply for the latest SDK.
@@ -2534,3 +2535,12 @@ ExportImageParamsBuilder builder = new ExportImageParamsBuilder()
 | -13045     | Failed to create noise reduction data            |
 | -13046     | Image width is equal to 0                        |
 | -13047     | Image height is equal to 0                       |
+
+
+# FAQ
+1.OKGO error report
+> implementation("com.github.jeasonlzy.okhttp-OkGo:okgo:v3.0.4")
+> implementation("com.arashivision.sdk:sdkcamera:1.8.0_build_11"){
+>     exclude("com.github.jeasonlzy","okhttp-OkGo")
+> }
+> implementation("com.arashivision.sdk:sdkmedia:1.8.0_build_11")
