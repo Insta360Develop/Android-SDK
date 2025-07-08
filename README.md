@@ -3,6 +3,8 @@ Currently on `V1.8.1-build6` branch. To view other versions, please switch branc
 
 32-bit library (armeabi-v7a) is no longer maintained, please use 64-bit library (arm64-v8a) to build!
 
+[FQA](#FQA)
+
 # How to get?
 
 Please visit [https://www.insta360.com/sdk/apply](https://www.insta360.com/sdk/apply) to apply for the latest SDK.
@@ -2750,3 +2752,12 @@ Some functions need to rely on algorithm files. The algorithm files are obtained
 >    - Advantages: Perfect solution to the problem of not being able to access the Internet
 >
 >    - Disadvantages: Complex implementation
+>   
+
+# FAQ
+1.OKGO error report
+> implementation("com.github.jeasonlzy.okhttp-OkGo:okgo:v3.0.4")
+> implementation("com.arashivision.sdk:sdkcamera:1.8.0_build_11"){
+>     exclude("com.github.jeasonlzy","okhttp-OkGo")
+> }
+> implementation("com.arashivision.sdk:sdkmedia:1.8.0_build_11")
