@@ -3,7 +3,7 @@ Currently on `V1.8.1-build6` branch. To view other versions, please switch branc
 
 32-bit library (armeabi-v7a) is no longer maintained, please use 64-bit library (arm64-v8a) to build!
 
-[FQA](#FQA)
+[FAQ](#FAQ)
 
 # How to get?
 
@@ -2755,9 +2755,4 @@ Some functions need to rely on algorithm files. The algorithm files are obtained
 >   
 
 # FAQ
-1.OKGO error report
-> implementation("com.github.jeasonlzy.okhttp-OkGo:okgo:v3.0.4")
-> implementation("com.arashivision.sdk:sdkcamera:1.8.0_build_11"){
->     exclude("com.github.jeasonlzy","okhttp-OkGo")
-> }
-> implementation("com.arashivision.sdk:sdkmedia:1.8.0_build_11")
+
