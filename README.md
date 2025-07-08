@@ -2540,7 +2540,11 @@ ExportImageParamsBuilder builder = new ExportImageParamsBuilder()
 # FAQ
 1.OKGO error report
 > implementation("com.github.jeasonlzy.okhttp-OkGo:okgo:v3.0.4")
+> 
 > implementation("com.arashivision.sdk:sdkcamera:1.8.0_build_11"){
+> 
 >     exclude("com.github.jeasonlzy","okhttp-OkGo")
+> 
 > }
+> 
 > implementation("com.arashivision.sdk:sdkmedia:1.8.0_build_11")
