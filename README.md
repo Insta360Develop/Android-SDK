@@ -2720,39 +2720,6 @@ Some functions need to rely on algorithm files. The algorithm files are obtained
 
 # Frequently asked questions
 
-## Q1: What should I do if I cannot access the Internet when connecting to the camera?
-
-> Generally, this situation refers to the situation where a connection is established with the camera via Wi-Fi. There are two ways for the App to communicate with the camera, one is socket and the other is http. The following are the functions corresponding to the two communication methods:
->
-> - Socket: preview stream, read camera parameters, set camera parameters, read shooting parameters, set shooting parameters, etc. // TODO Supported functions to be improved
->
-> - Http: initialize the support list and download camera files.
->
-> The root cause of this problem is that when establishing a socket connection with the camera, the `ConnectivityManager#bindProcessToNetwork(network)` method is called to bind the current process to the camera's WI-FI network.
->
-> Therefore, after the Wi-Fi connection is successful, call the `ConnectivityManager#bindProcessToNetwork(4GNetWork)` method to bind an available network (such as a 4G network) to solve the problem of being unable to access the Internet. At this time, the Socket connection is already connected. After unbinding, you can still use the functions supported by the Socket.
->
-> But there is a problem with this. Because the current process is not bound to the camera's Wi-Fi, when using functions that rely on http communication, the following error will appear:
->
-> ```java
-> start download http://192.168.42.1:80/DCIM/Camera01/VID_20250623_120439_00_003.insv
-> download failed  code=-1  body=null  exception=java.net.SocketTimeoutException: failed to connect to /192.168.42.1 (port 80) from /10.0.134.179 (port 56028) after 60000ms
-> ```
->
-> There are two solutions to this problem:
->
-> 1. When using functions related to Http communication, call the `bindProcessToNetwork(camera)` method to bind to the camera Wi-Fi. At the end of the related function, call `bindProcessToNetwork(4g)` to switch back to the available 4G network.
->
->    - Advantages: simple implementation
->
->    - Disadvantages: will temporarily disconnect from the Internet
->
-> 2. Start a new process named download. Call the `bindProcessToNetwork(camera)` method to bind the download process to the camera's Wi-Fi network. All functions related to Http communication are performed in the download process.
->
->    - Advantages: Perfect solution to the problem of not being able to access the Internet
->
->    - Disadvantages: Complex implementation
->   
 
 # FAQ
 
