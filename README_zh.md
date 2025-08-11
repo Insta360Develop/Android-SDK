@@ -2761,30 +2761,4 @@ ExportImageParamsBuilder builder = new ExportImageParamsBuilder()
 
 # 常见问题
 
-## Q1：连接相机时，无法访问互联网怎么办？
-
-> 一般这种情况指的是通过Wi-Fi与相机建立连接的情况。App与相机的通信方式分为两种，一种是socket，另一种是http。下面是是两种通讯方式对应的功能：
->
-> - Socket：预览流，读取相机参数，设置相机参数，读取拍摄参数，设置拍摄参数等。// TODO 支持的功能待完善
-> - Http：初始化支持列表，下载相机文件。
->
-> 出现这个问题的根本原因是因为在与相机建立socket连接的时候，调用了`ConnectivityManager#bindProcessToNetwork(network)` 方法，把当前进程和相机WI-FI网络进行绑定。
->
-> 因此在Wi-Fi连接成功之后，调用`ConnectivityManager#bindProcessToNetwork(4GNetWork)` 方法绑定可用的网络（如4G网络），即可解决无法访问互联网的问题。此时已经连接Socket连接，解绑之后，依然可以使用Socket支持的功能。
->
-> 但这样做会有一个问题。因为当前进程与相机Wi-Fi之间未绑定，在使用依赖http通信的功能时，会出现如下报错：
->
-> ```java
-> start download http://192.168.42.1:80/DCIM/Camera01/VID_20250623_120439_00_003.insv
-> download failed  code=-1  body=null  exception=java.net.SocketTimeoutException: failed to connect to /192.168.42.1 (port 80) from /10.0.134.179 (port 56028) after 60000ms
-> ```
->
-> 解决这个问题有2种方案：
->
-> 1. 在使用Http通信方式相关的功能时，调用`bindProcessToNetwork(camera)`方法绑定至相机Wi-Fi。在相关功能结束时，调用`bindProcessToNetwork(4g)`切换回可用的4G网络。
->    1. 优点：实现简单
->    2. 缺点：会短暂的断开与互联网的连接
-> 2. 开启一个新的进程，命名为download。调用`bindProcessToNetwork(camera)`方法将download进程与相机Wi-Fi网络进行绑定。所有与Http通讯相关的功能放在download进程中进行。
->    1. 优点：完美解决无法访问互联网的问题
->    2. 缺点：实现复杂
 
