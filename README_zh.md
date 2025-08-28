@@ -74,7 +74,7 @@ allprojects {
 
 ```groovy
 dependencies {
-    implementation 'com.arashivision.sdk:sdkcamera:1.8.0'
+    implementation 'xxxxxxx'
 }
 ```
 
