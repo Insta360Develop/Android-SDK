@@ -4,6 +4,7 @@
 
 32 位库（armeabi-v7a）已不再维护，请使用 64 位库（arm64-v8a）进行构建！
 
+* [常见问题](#常见问题)
 # 如何获取？
 
 请访问 [https://www.insta360.com/sdk/apply](https://www.insta360.com/sdk/apply) 申请最新 SDK。
