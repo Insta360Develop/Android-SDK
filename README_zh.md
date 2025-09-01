@@ -2769,6 +2769,7 @@ ExportImageParamsBuilder builder = new ExportImageParamsBuilder()
 - Http  初始化支持列表，下载相机文件。// TODO 支持的功能待完善
 
 出现这个问题的根本原因是因为在与相机建立socket连接的时候，调用了ConnectivityManager#bindProcessToNetwork(network) 方法，把当前进程和相机WI-FI网络进行绑定。
+
 因此在Wi-Fi连接成功之后，调用ConnectivityManager#bindProcessToNetwork(4GNetWork) 方法绑定可用的网络（如4G网络），即可解决无法访问互联网的问题。此时已经连接Socket连接，解绑之后，依然可以使用Socket支持的功能。
 
 但这样做会有一个问题。因为当前进程与相机Wi-Fi之间未绑定，在使用依赖http通信的功能时，会出现如下报错：
