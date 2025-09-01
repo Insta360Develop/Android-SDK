@@ -2723,3 +2723,31 @@ Some functions need to rely on algorithm files. The algorithm files are obtained
 
 # FAQ
 
+## Q1: What should I do if I cannot access the Internet when connecting to the camera?
+This generally refers to establishing a connection with the camera via Wi-Fi. Apps can communicate with cameras via two methods: sockets and HTTP. Below are the corresponding functions for each communication method:
+
+- Socket: Preview stream, read camera parameters, set camera parameters, read shooting parameters, set shooting parameters, etc. // TODO Supported functions to be improved
+
+- Http: Initialize support list, download camera files. // TODO Supported functions to be improved
+
+The root cause of this problem is that when establishing a socket connection with the camera, the ConnectivityManager#bindProcessToNetwork(network) method is called to bind the current process to the camera's Wi-Fi network.
+
+Therefore, after a successful Wi-Fi connection, calling ConnectivityManager#bindProcessToNetwork(4GNetWork) to bind to an available network (such as a 4G network) can resolve the issue of being unable to access the internet. At this point, the socket connection is already connected. After unbinding, you can still use socket-supported functions.
+
+However, this approach has a problem. Because the current process is not bound to the camera's Wi-Fi, using functions that rely on HTTP communication will result in the following error:
+
+<img width="1403" height="138" alt="image" src="https://github.com/user-attachments/assets/547ff175-cf07-4eee-be4a-920da5620cc3" />
+
+There are two solutions to this problem:
+
+1. When using HTTP communication-related functions, call the bindProcessToNetwork(camera) method to bind to the camera's Wi-Fi network. At the end of the corresponding function, call bindProcessToNetwork(4g) to switch back to the available 4G network.
+
+Pros: Simple implementation
+
+Cons: Will temporarily disconnect from the Internet.
+
+2. Start a new process named download. Call the bindProcessToNetwork(camera) method to bind the download process to the camera's Wi-Fi network. Perform all HTTP communication-related functions in the download process.
+
+Pros: Perfectly solves the problem of being unable to access the Internet.
+
+Cons: Complex implementation
