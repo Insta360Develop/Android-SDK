@@ -489,6 +489,18 @@ InstaCameraManager.getInstance().getWindowCropInfo();
 CaptureMode captureMode = InstaCameraManager.getInstance().getCurrentCaptureMode();
 ```
 
+### 切换拍摄模式
+
+```java
+InstaCameraManager.getInstance().setCaptureMode(captureMode, errorCode -> {
+    if (errorCode == 0) {
+        // 切换成功
+    } else {
+        // 切换失败
+    }
+});
+```
+
 ### 判断相机是否工作中
 
 ```java
