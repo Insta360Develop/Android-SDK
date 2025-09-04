@@ -470,6 +470,16 @@ The current SDK supports the following shooting modes:
 ```java
 CaptureMode captureMode = InstaCameraManager.getInstance().getCurrentCaptureMode();
 ```
+### Switching shooting modes
+```java
+InstaCameraManager.getInstance().setCaptureMode(captureMode, errorCode -> {
+    if (errorCode == 0) {
+        // 切换成功
+    } else {
+        // 切换失败
+    }
+});
+```
 
 ### Determine if the camera is working
 
