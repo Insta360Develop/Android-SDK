@@ -53,6 +53,8 @@ Supported models: X5, X4, X3, ONE X2, ONE X, ONE RS, ONE RS 1-Inch.
 
 ## **Preparation Work**
 
+* For specific dependency configuration, please refer to the Demo in the SDK package.
+
 * Add the Maven repository to the build file (the `build.gradle` file in the project root):
 
 ```groovy
