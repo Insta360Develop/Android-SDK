@@ -1532,7 +1532,7 @@ InstaCameraManager.getInstance().calibrateGyro(new ICameraOperateCallback() {
 
 ### Camera lock screen
 
-> Note: Nano S cameras do not support this feature.
+> Note: Only supports X4 and X5.
 
 After the camera is locked, the user cannot operate the camera screen. The sample code is as follows:
 
