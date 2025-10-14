@@ -1545,7 +1545,7 @@ InstaCameraManager.getInstance().calibrateGyro(new ICameraOperateCallback() {
 
 ### 相机锁屏
 
-> 注意：Nano S 相机不支持此功能。
+> 注意：仅支持X4、X5。
 
 相机锁屏之后用户无法操作相机屏幕，示例代码如下：
 
