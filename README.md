@@ -24,6 +24,7 @@ The Android SDK is mainly used for connecting, setting and obtaining camera para
 Supported models: X5, X4, X3, ONE X2, ONE X, ONE RS, ONE RS 1-Inch.
 
 # Table of contents
+
 * [Camera SDK Function](#camera-sdk-function)
     * [Environmental Preparation](#environmental-preparation)
     * [Connection Module](#connection-module)
@@ -2815,7 +2816,7 @@ Below is a table mapping function of their corresponding required algorithms:
 | -13046     | Image width equals 0                             |
 | -13047     | Image height equals 0                            |
 
-# Frequently Asked Questions:
+# FAQ
 
 ## Q1: What should I do if I cannot access the Internet when connecting to the camera?
 
