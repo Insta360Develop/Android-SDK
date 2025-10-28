@@ -1183,7 +1183,7 @@ InstaCameraManager.getInstance().startPureRecord();
 InstaCameraManager.getInstance().stopPureRecord();
 ```
 
-## LIVE
+## LIVE Module
 
 > Note: Required to use with the `Media SDK`.
 
@@ -2831,7 +2831,7 @@ Below is a table mapping function of their corresponding required algorithms:
 >
 > However, this approach introduces a problem. Because the current process is no longer bound to the camera's Wi-Fi, using features dependent on HTTP communication will result in the following error:
 >
-> ![img](https://arashivision.feishu.cn/space/api/box/stream/download/asynccode/?code=NTVkNWQxMmYzZTQyZjkzOGY4OGEzMzZkYjhkMzExNTlfa05pMlBLWHc2UnBTajV0R2cwanZsbERDeXkwdVV5b2ZfVG9rZW46Vm9Yb2JqSGdFb2IzV1Z4Qkt6QWNReHV0bktoXzE3NjA1ODI4NDg6MTc2MDU4NjQ0OF9WNA)
+> <img width="1403" height="138" alt="image" src="https://github.com/user-attachments/assets/bb8afc34-7632-4bc2-9891-3c2e14650e60" />
 >
 > There are two solutions to this problem:
 >
