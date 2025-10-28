@@ -2830,7 +2830,7 @@ ExportImageParamsBuilder builder = new ExportImageParamsBuilder()
 >
 > 但这样做会有一个问题。因为当前进程与相机Wi-Fi之间未绑定，在使用依赖http通信的功能时，会出现如下报错：
 >
-> ![img](https://arashivision.feishu.cn/space/api/box/stream/download/asynccode/?code=NzJlZmI5ZTNjYThjYWQ4MWQyNGEzOTdiZjUzNjZmNjBfYXBWcHlaZWVIRmg1Z2E1WDBHeWxGUDdEOHZpVEg2empfVG9rZW46S3RqY2JVcWdRb1FjSkp4bzlPZGNNWTJObmlnXzE3NjA1ODE0MjU6MTc2MDU4NTAyNV9WNA)
+> ![Uploading image.png…]()
 >
 > 解决这个问题有2种方案：
 >
