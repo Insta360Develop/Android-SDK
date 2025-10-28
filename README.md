@@ -34,7 +34,7 @@ Supported models: X5, X4, X3, ONE X2, ONE X, ONE RS, ONE RS 1-Inch.
     * [Camera Lens Control Module](#camera-lens-control-module)
     * [Preview Module](#preview-module)
     * [Capture Control Module](#capture-control-module)
-    * [LIVE](#live)
+    * [LIVE Module](#live-module)
     * [File Management Module](#file-management-module)
     * [Logging Module](#logging-module)
     * [GPS Data Module](#gps-data-module)
