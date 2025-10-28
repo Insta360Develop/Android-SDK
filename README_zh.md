@@ -1,3 +1,28 @@
+# 注意：
+
+当前为 `V1.8.2-build4` 分支版本，若需查看其他版本，请切换对应分支。
+
+32 位库（armeabi-v7a）已不再维护，请使用 64 位库（arm64-v8a）进行构建！
+
+* [常见问题](#常见问题)
+# 如何获取？
+
+请访问 [https://www.insta360.com/sdk/apply](https://www.insta360.com/sdk/apply) 申请最新 SDK。
+
+# 技术支持
+
+开发者主页：https://www.insta360.com/developer/home  
+企业解决方案：https://www.insta360.com/enterprise  
+问题反馈表单：https://insta.jinshuju.com/f/hZ4aMW  
+
+# [English Document](README.md)
+
+# 简要
+
+安卓端SDK主要用于连接、设置和获取相机参数、控制相机进行拍照和录制、文件下载、固件升级和支持视频导出与图片导出等。
+
+支持机型：X5, X4, X3, ONE X2, ONE X, ONE RS, ONE RS一英寸。
+# 目录
 
 * [Camera SDK功能](#camera-sdk功能)
     * [环境准备](#环境准备)
