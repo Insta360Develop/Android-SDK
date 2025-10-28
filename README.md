@@ -1,3 +1,27 @@
+# Note:
+Currently on `V1.8.1-build6` branch. To view other versions, please switch branches.
+
+32-bit library (armeabi-v7a) is no longer maintained, please use 64-bit library (arm64-v8a) to build!
+
+[FAQ](#FAQ)
+
+# How to get?
+
+Please visit [https://www.insta360.com/sdk/apply](https://www.insta360.com/sdk/apply) to apply for the latest SDK.
+
+# Support
+
+Developers' Page: https://www.insta360.com/developer/home  
+Insta360 Enterprise: https://www.insta360.com/enterprise  
+Issue Report: https://insta.jinshuju.com/f/hZ4aMW  
+
+# [中文文档](README_zh.md)
+
+# Overview
+
+The Android SDK is mainly used for connecting, setting and obtaining camera parameters, controlling the camera for taking photos and recording, downloading files, firmware upgrades, and supporting video and image exports.
+
+Supported models: X5, X4, X3, ONE X2, ONE X, ONE RS, ONE RS 1-Inch.
 
 * [Camera SDK Function](#camera-sdk-function)
     * [Environmental Preparation](#environmental-preparation)
