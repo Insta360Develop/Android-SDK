@@ -1198,40 +1198,26 @@ boolean isLiveMode = CaptureMode.PURE_RECORD.isLiveMode();
 > Note: After the preview stream is turned off, the camera will automatically switch the capturing mode to normal recording. Before starting LIVE, you need to check whether the current capturing mode is LIVE.
 
 ```java
-LiveParamsBuilder builder = new LiveParamsBuilder()
-         //(Required) Set the RTMP address for stream pushing
-        .setRtmp(String rtmp)
-        //(Required) Set the stream width, e.g., 1440
-        .setWidth(int width)
-        //(Required) Set the stream height, e.g., 720
-        .setHeight(int height)
-        // (Required) Set the frame rate, e.g., 30
-        .setFps(int fps)
-        //(Required) Set the bitrate, e.g., 2*1024*1024
-        .setBitrate(int bitrate)
-        //(Optional) Whether it is panoramic streaming or not, default is true
-        .setPanorama(true);
-        
-InstaCameraManager.getInstance().startLive(builder, new ILiveStatusListener() {
+InstaCameraManager.getInstance().startLive(rtmp, netid, new ILiveStatusListener() {
 
     @Override
     public void onLiveFpsUpdate(int fps) {
-        // fps: current live streaming frame rate
+        // fps：当前直播帧率
     }
 
     @Override
     public void onLivePushError(int error, String desc) {
-        // Live stream push failed
+        // 直播推流失败
     }
 
     @Override
     public void onLivePushFinished() {
-        // Live stream push finished
+        // 直播推流结束
     }
 
     @Override
     public void onLivePushStarted() {
-        // Live stream push started
+        // 直播推流开始
     }
 });
 ```
