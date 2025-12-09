@@ -1,6 +1,6 @@
 # 注意：
 
-当前为 `V1.9.3` 分支版本，若需查看其他版本，请切换对应分支。
+当前为 `V1.9.4` 分支版本，若需查看其他版本，请切换对应分支。
 
 32 位库（armeabi-v7a）已不再维护，请使用 64 位库（arm64-v8a）进行构建！
 
@@ -1197,23 +1197,11 @@ boolean isLiveMode = CaptureMode.PURE_RECORD.isLiveMode();
 ### 开始直播
 
 > 注意：预览流关闭之后，相机会自动把拍摄模式切换至普通录像。开支直播之前需要先检查当前拍摄模式是否是直播。
+>
+> 具体的参数（分辨率）需要使用CaptureSetting设置
 
 ```java
-LiveParamsBuilder builder = new LiveParamsBuilder()
-         //（必须）将rtmp地址设置为推送流
-        .setRtmp(String rtmp)
-        //（必须）设置推送的宽度，例如1440
-        .setWidth(int width)
-        //（必须）设置推送的高度，例如720
-        .setHeight(int height)
-        // 必须）设置推送的帧率，例如30
-        .setFps(int fps)
-        //（必须）设置要推送的比特率，例如2*1024*1024
-        .setBitrate(int bitrate)
-        //（可选）无论直播是否为全景，默认值均为true
-        .setPanorama(true);
-        
-InstaCameraManager.getInstance().startLive(builder, new ILiveStatusListener() {
+InstaCameraManager.getInstance().startLive(rtmp, netid, new ILiveStatusListener() {
 
     @Override
     public void onLiveFpsUpdate(int fps) {
