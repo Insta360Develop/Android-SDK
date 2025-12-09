@@ -1196,6 +1196,7 @@ boolean isLiveMode = CaptureMode.PURE_RECORD.isLiveMode();
 ### Start Live Streaming
 
 > Note: After the preview stream is turned off, the camera will automatically switch the capturing mode to normal recording. Before starting LIVE, you need to check whether the current capturing mode is LIVE.
+> Specific parameters are set using CaptureSetting.
 
 ```java
 InstaCameraManager.getInstance().startLive(rtmp, netid, new ILiveStatusListener() {
