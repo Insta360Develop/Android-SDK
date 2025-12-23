@@ -2818,7 +2818,8 @@ ExportImageParamsBuilder builder = new ExportImageParamsBuilder()
 >
 > 但这样做会有一个问题。因为当前进程与相机Wi-Fi之间未绑定，在使用依赖http通信的功能时，会出现如下报错：
 >
-> ![Uploading image.png…]()
+> start download http://192.168.42.1:80/DCIM/Camera01/VID_20250623_120439_00_003.insv
+> download failed code=-1 body=null exception=javaa.net.SocketTimeoutException: failed to connect to/192.168.42.1 (port 80) from /10.0.134.179 (port 56028) after 60000ms
 >
 > 解决这个问题有2种方案：
 >
