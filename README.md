@@ -2858,11 +2858,19 @@ Below is a table mapping function of their corresponding required algorithms:
 ## Q7: What to do if my Google Play Store submission is rejected because the .so library is under 16K after integrating the SDK?
 
 >Download version 1.8.2-build4 from the Maven repository.
+>
 >Then, exclude the following libraries from your package (this won't affect SDK functionality), and then submit to the Google Play Store:
+>
 >libSnpeHtpV68Skel.so (AI acceleration-related auxiliary components)
+>
 >libSnpeHtpV69Skel.so (AI acceleration-related auxiliary components)
+>
 >libSnpeHtpV73Skel.so (AI acceleration-related auxiliary components)
+>
 >iibSnpeHtpV75Skel.so (AI acceleration-related auxiliary components)
+>
 >libSnpeHtpV7.9Skel.so (AI acceleration-related auxiliary components)
+>
 >libcalculator_skel.so (AI acceleration-related auxiliary components)
+>
 >x86_64/libmobvoidsp.so (X86 library; selecting X64 in the package will prevent it from being included)
