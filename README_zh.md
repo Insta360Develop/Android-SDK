@@ -2860,7 +2860,7 @@ ExportImageParamsBuilder builder = new ExportImageParamsBuilder()
 
 >在Maven仓库中下载1.8.2-build4这个版本。
 >
->然后，把一下的库在打包中排除(不会影响SDK功能)，在上架谷歌商店即可
+>然后，把以下的库在打包中排除(不会影响SDK功能)，在上架谷歌商店即可
 >
 >libSnpeHtpV68Skel.so（AI 加速相关的辅助组件）
 >
