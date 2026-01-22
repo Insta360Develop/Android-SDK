@@ -2855,3 +2855,24 @@ ExportImageParamsBuilder builder = new ExportImageParamsBuilder()
 ## Q6：关于华为部分手机播放黑屏的问题？
 
 > 照片宽度16386，超过了华为部分手机的的渲染尺寸8192。
+
+## Q7：集成了SDK后提交到谷歌商店因.so库不满足16K被拒绝怎么办？
+
+>在Maven仓库中下载1.8.2-build4这个版本。
+>
+>然后，把一下的库在打包中排除(不会影响SDK功能)，在上架谷歌商店即可
+>
+>libSnpeHtpV68Skel.so（AI 加速相关的辅助组件）
+>
+>libSnpeHtpV69Skel.so（AI 加速相关的辅助组件）
+>
+>libSnpeHtpV73Skel.so（AI 加速相关的辅助组件）
+>
+>iibSnpeHtpV75Skel.so（AI 加速相关的辅助组件）
+>
+>libSnpeHtpV7.9Skel.so（AI 加速相关的辅助组件）
+>
+>libcalculator_skel.so（AI 加速相关的辅助组件）
+>
+>x86_64/libmobvoidsp.so（X86的库，打包选择X64不会带上）
+
