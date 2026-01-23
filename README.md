@@ -2855,7 +2855,7 @@ Below is a table mapping function of their corresponding required algorithms:
 
 > The photo width is 16386 pixels, exceeding the 8192-pixel rendering limit on some Huawei phones.
 
-## Q7: What to do if my Google Play Store submission is rejected because the .so library is under 16K after integrating the SDK?
+## Q7: What should I do if my Google Play Store submission is rejected after integrating the SDK because the .so file is not aligned to 16K?
 
 >Download version 1.8.2-build4 from the Maven repository.
 >
